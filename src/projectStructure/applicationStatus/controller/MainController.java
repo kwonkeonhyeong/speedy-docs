@@ -24,6 +24,11 @@ public class MainController {
     }
 
     public void run() {
-
+        /*
+        ApplicationStatus applicationStatus = ApplicationStatus.REGISTER_VENDING_MACHINE;
+        while (applicationStatus.isPlayable()) {
+            applicationStatus = controllers.get(applicationStatus).process();
+        }
+        */
     }
 }
