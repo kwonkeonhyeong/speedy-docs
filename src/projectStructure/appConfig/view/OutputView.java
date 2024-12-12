@@ -1,4 +1,4 @@
-package projectStructure.applicationStatus.view;
+package projectStructure.appConfig.view;
 
 public class OutputView {
 

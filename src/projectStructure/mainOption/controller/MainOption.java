@@ -18,6 +18,10 @@ public enum MainOption {
                 .orElseThrow(() -> new IllegalArgumentException("[ERROR] 선택할 수 없는 기능입니다. 다시 입력해주세요."));
     }
 
+    public boolean isPlayable() {
+        return this != EXIT;
+    }
+
     public String getOption() {
         return option;
     }

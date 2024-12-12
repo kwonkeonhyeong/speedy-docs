@@ -33,10 +33,21 @@ public class MainController {
         */
     }
 
-    private <T> T doLoop(Supplier<T> function) {
-        while(true) {
+    private <T> T doLoopWithReturn(Supplier<T> function) {
+        while (true) {
             try {
                 return function.get();
+            } catch (IllegalArgumentException e) {
+                outputView.printErrorMessage(e.getMessage());
+            }
+        }
+    }
+
+    private void doLoop(Runnable runnable) {
+        while (true) {
+            try {
+                runnable.run();
+                return;
             } catch (IllegalArgumentException e) {
                 outputView.printErrorMessage(e.getMessage());
             }
